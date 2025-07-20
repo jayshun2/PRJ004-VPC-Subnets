@@ -1,10 +1,12 @@
 # PRJ004-VPC-Subnets
 Create a secure and scalable AWS network using a Virtual Private Cloud (VPC) with public and private subnets. This project demonstrates how to separate internet-facing resources from internal infrastructure using best practices like NAT gateways, route tables, and subnet isolation. Part of the "52 AWS Projects in 52 Weeks" series.
 
-VPC with Public/Private Subnets
-Overview
+# VPC with Public/Private Subnets
+
+## Overview
 This project demonstrates how to create a secure and scalable network on AWS using a Virtual Private Cloud (VPC) with both public and private subnets. It’s a foundational setup that mimics real-world cloud infrastructure — separating internet-facing components (like web servers) from internal resources (like databases). This design improves security and control over your cloud environment.
-Architecture
+
+## Architecture
 The core AWS services used in this project include:
 Amazon VPC – Creates a private, isolated network in the AWS cloud.
 
@@ -26,7 +28,8 @@ EC2 Instances – Launched in both public and private subnets to test connectivi
 
 These components work together to create a secure environment where public-facing services are accessible externally, while sensitive systems remain protected and internal.
 Getting Started
-Prerequisites:
+
+## Prerequisites:
 AWS account (Free Tier eligible)
 
 
@@ -36,7 +39,7 @@ IAM user with admin privileges
 Basic terminal or console navigation knowledge
 
 
-Steps:
+## Steps:
 Log in to the AWS Management Console.
 
 
@@ -70,7 +73,7 @@ Launch one EC2 instance in the public subnet (with a public IP) and one in the p
 Configure Security Groups to allow SSH access to the public instance and internal access to the private one.
 
 
-Usage
+## Usage
 Connect to the EC2 instance in the public subnet via SSH.
 
 
@@ -80,7 +83,7 @@ From there, SSH into the private instance using its private IP (bastion-style ac
 Test internet access from the private instance (e.g., ping google.com) to confirm NAT Gateway functionality.
 
 
-Cleanup
+## Cleanup
 To avoid incurring charges:
 Terminate both EC2 instances.
 
@@ -94,7 +97,7 @@ Release the Elastic IP.
 Delete subnets, route tables, Internet Gateway, and finally the VPC.
 
 
-Optional Enhancements
+## Optional Enhancements
 Deploy a bastion host for managed access to the private subnet.
 
 
