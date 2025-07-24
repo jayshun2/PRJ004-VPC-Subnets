@@ -8,6 +8,7 @@ This project demonstrates how to create a secure and scalable network on AWS usi
 
 ## Architecture
 The core AWS services used in this project include:
+
 Amazon VPC – Creates a private, isolated network in the AWS cloud.
 
 
